@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #ffffff;
+  /* background: black; */
   box-shadow: 0px 5px 37px -8px rgba(25, 84, 155, 0.07),
     0px -9px 20px -20px rgba(25, 84, 155, 0.3);
   border-radius: 0px;
@@ -11,13 +11,18 @@
 
 .but-wrapper {
   display: flex;
+  /* justify-content: space-evenly; */
   grid-auto-flow: column;
 }
 
 .circle {
   position: absolute;
   top: calc(-1rem - 3px);
+
+  width: 40px; /* Adjust this value based on your design */
+  height: 40px; /* Adjust this value based on your design */
   background-color: white;
+  margin-left: calc(12.5% - 20px);
   border-radius: 50%;
   transition: 0.2s ease;
   will-change: transform;
@@ -55,12 +60,15 @@
       transform: translateY(0px);
     }
   }
-  position: absolute;
-  left: calc(50% - 0.5rem);
-  top: -1rem;
-  color: #348eff;
-  font-size: 1rem;
-  animation: up-down-2 0.4s linear forwards;
+
+  .selected-icon {
+    position: absolute;
+    left: calc(50% - 0.5rem);
+    top: -1rem;
+    color: #348eff;
+    font-size: 1rem;
+    animation: up-down-2 0.4s linear forwards;
+  }
 }
 
 .icon {
